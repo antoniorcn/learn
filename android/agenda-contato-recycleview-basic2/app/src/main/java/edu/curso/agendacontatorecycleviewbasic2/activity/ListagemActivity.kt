@@ -16,8 +16,8 @@ class ListagemActivity: AppCompatActivity(), ItemClickListener {
     private lateinit var binding: ListagemLayoutBinding
     private lateinit var contatoViewModel: ContatoViewModel
 
-    override fun onCreate(bundle: Bundle?) {
-        super.onCreate(bundle)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding=ListagemLayoutBinding.inflate( layoutInflater )
         contatoViewModel = ViewModelProvider(this)[ContatoViewModel::class.java]
         binding.viewModel = contatoViewModel

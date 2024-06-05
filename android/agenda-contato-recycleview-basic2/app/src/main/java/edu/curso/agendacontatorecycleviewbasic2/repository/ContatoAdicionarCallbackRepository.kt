@@ -5,6 +5,6 @@ import edu.curso.agendacontatorecycleviewbasic2.model.ContatoId
 import java.io.IOException
 
 interface ContatoAdicionarCallbackRepository {
-    fun onSucesso(id : ContatoId)
+    fun onSucesso(contatoId : ContatoId)
     fun onError(error : IOException?)
 }
