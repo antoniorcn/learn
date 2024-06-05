@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="contato" type="edu.curso.agendacontatomaps.Contato"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulario Contato"
+            android:textAlignment="center"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/txtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nome"
+            android:text="@{contato.nome}"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Telefone"
+            android:text="@{contato.telefone}"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:text="@{contato.email}"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnGravar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gravar" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnListagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listagem" />
+
+        <Button
+            android:id="@+id/btnMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mapa" />
+    </LinearLayout>
+</layout>
