@@ -18,6 +18,7 @@ class FormularioActivity : AppCompatActivity() {
         binding= FormularioLayoutBinding.inflate( layoutInflater )
         contatoViewModel = ViewModelProvider(this)[ContatoViewModel::class.java]
         binding.viewModel = contatoViewModel
+        binding.lifecycleOwner = this
         setContentView(binding.root)
 
         val tempContatoSerializable = intent.getSerializableExtra("CONTATO-SELECIONADO")
