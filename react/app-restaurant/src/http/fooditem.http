@@ -1,0 +1,29 @@
+POST https://app-restaurant-165de-default-rtdb.firebaseio.com/FoodItem.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "foodItemId": "1",
+    "foodItemName": "Queijo prato",
+    "price": 1.99
+}
+
+###
+POST https://app-restaurant-165de-default-rtdb.firebaseio.com/FoodItem.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "foodItemId": "2",
+    "foodItemName": "Alface",
+    "price": 0.99
+}
+
+
+###
+POST https://app-restaurant-165de-default-rtdb.firebaseio.com/FoodItem.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "foodItemId": "3",
+    "foodItemName": "Tomate",
+    "price": 0.99
+}

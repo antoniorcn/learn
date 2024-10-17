@@ -1,0 +1,26 @@
+POST https://app-restaurant-165de-default-rtdb.firebaseio.com/Customer.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "customerId": "1",
+    "customerName": "Customer A"
+}
+
+###
+POST https://app-restaurant-165de-default-rtdb.firebaseio.com/Customer.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "customerId": "2",
+    "customerName": "Customer B"
+}
+
+
+###
+POST https://app-restaurant-165de-default-rtdb.firebaseio.com/Customer.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "customerId": "3",
+    "customerName": "Customer C"
+}
