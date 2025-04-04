@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-horoscope_sign",
+      "2": "I-horoscope_sign",
+      "3": "L-horoscope_sign",
+      "4": "U-horoscope_sign",
+      "5": "B-subscribe",
+      "6": "I-subscribe",
+      "7": "L-subscribe",
+      "8": "U-subscribe",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-horoscope_sign": 1,
+      "I-horoscope_sign": 2,
+      "L-horoscope_sign": 3,
+      "U-horoscope_sign": 4,
+      "B-subscribe": 5,
+      "I-subscribe": 6,
+      "L-subscribe": 7,
+      "U-subscribe": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
