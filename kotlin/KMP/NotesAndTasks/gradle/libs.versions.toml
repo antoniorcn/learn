@@ -16,7 +16,6 @@ junit = "4.13.2"
 kotlin = "2.1.10"
 kotlinx-coroutines = "1.10.1"
 voyager = "1.0.0"
-# navigation = "2.8.0-alpha10"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -33,7 +32,6 @@ androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", nam
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 voyager = {module = "cafe.adriel.voyager:voyager-screenmodel", version.ref="voyager"}
-# androidx-navigation = { module="org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

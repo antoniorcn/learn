@@ -50,7 +50,6 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(libs.voyager)
-            // implementation(libs.androidx.navigation)
 
             implementation(compose.runtime)
             implementation(compose.foundation)

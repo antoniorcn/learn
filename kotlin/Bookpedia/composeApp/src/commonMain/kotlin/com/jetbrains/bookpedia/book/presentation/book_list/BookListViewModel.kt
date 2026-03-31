@@ -17,16 +17,16 @@ class BookListViewModel : ViewModel() {
                     it.copy()
                 }
             }
+            is BookListAction.OnSearchQueryChange -> {
+                _state.update {
+                    it.copy( searchQuery = action.query)
+                }
+            }
             is BookListAction.OnTabSelected -> {
                 _state.update {
                     it.copy( selectedTabIndex = action.index)
                 }
 
-            }
-            is BookListAction.OnSearchQueryChange -> {
-                _state.update {
-                    it.copy( searchQuery = action.query)
-                }
             }
         }
     }

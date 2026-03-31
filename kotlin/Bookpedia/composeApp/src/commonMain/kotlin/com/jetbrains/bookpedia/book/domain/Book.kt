@@ -1,15 +1,15 @@
 package com.jetbrains.bookpedia.book.domain
 
-data class Book( var id : String = "",
-    var title : String = "",
-    var imageUrl : String = "",
-    var authors : List<String> = emptyList(),
-    var description : String = "",
-    var languages : List<String> = emptyList(),
-    var firsPublishYear : String = "",
-    var averageRating : Double = 0.0,
-    var ratingCount : Int = 0,
-    var numPages : Int = 0,
-    var numEditions : Int = 0
-) {
-}
+data class Book(
+    val id : String = "",
+    val title : String = "",
+    val imageUrl : String = "",
+    val authors : List<String> = emptyList(),
+    val description : String?,
+    val languages : List<String> = emptyList(),
+    val firsPublishYear : String?,
+    val averageRating : Double?,
+    val ratingCount : Int?,
+    val numPages : Int?,
+    val numEditions : Int = 1
+)

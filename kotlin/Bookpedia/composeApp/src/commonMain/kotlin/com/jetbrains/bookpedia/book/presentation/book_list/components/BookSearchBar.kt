@@ -27,6 +27,7 @@ import bookpedia.composeapp.generated.resources.Res
 import bookpedia.composeapp.generated.resources.close_hint
 import bookpedia.composeapp.generated.resources.search_hint
 import com.jetbrains.bookpedia.core.presentation.DarkBlue
+import com.jetbrains.bookpedia.core.presentation.DesertWhite
 import com.jetbrains.bookpedia.core.presentation.SandYellow
 import org.jetbrains.compose.resources.stringResource
 
@@ -40,8 +41,8 @@ fun BookSearchBar (
 
     CompositionLocalProvider(
         LocalTextSelectionColors provides TextSelectionColors (
-            handleColor = Color.Yellow,
-            backgroundColor = Color.Yellow
+            handleColor = SandYellow,
+            backgroundColor = SandYellow
         )
     ) {
         OutlinedTextField(
@@ -84,7 +85,7 @@ fun BookSearchBar (
                         Icon(
                             imageVector = Icons.Default.Close,
                             contentDescription = stringResource(Res.string.close_hint),
-                            tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.66f)
+                            tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
                 }
@@ -92,7 +93,7 @@ fun BookSearchBar (
             modifier = modifier
                 .background(
                     shape = RoundedCornerShape(100),
-                    color = Color.Yellow
+                    color = DesertWhite
                 )
                 .minimumInteractiveComponentSize()
         )

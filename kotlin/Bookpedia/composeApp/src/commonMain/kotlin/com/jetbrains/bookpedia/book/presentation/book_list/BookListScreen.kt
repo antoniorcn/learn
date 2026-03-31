@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.jetbrains.bookpedia.book.domain.Book
 import com.jetbrains.bookpedia.book.presentation.book_list.components.BookSearchBar
+import com.jetbrains.bookpedia.core.presentation.DarkBlue
 import org.koin.compose.viewmodel.koinViewModel
 
 
@@ -40,15 +41,16 @@ fun BookListScreenRoot(
 }
 
 @Composable
-fun BookListScreen(
+private fun BookListScreen(
+    viewModel: BookListViewModel = koinViewModel(),
     state: BookListState,
     onAction: (BookListAction) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val keyboardController = LocalSoftwareKeyboardController.current
-  Column ( modifier = Modifier
+    Column ( modifier = Modifier
       .fillMaxSize()
-      .background(color= Color.DarkGray)
+      .background(color= DarkBlue)
       .statusBarsPadding(),
       horizontalAlignment = Alignment.CenterHorizontally) {
       BookSearchBar(
@@ -63,8 +65,6 @@ fun BookListScreen(
               .widthIn(400.dp)
               .fillMaxWidth()
               .padding(16.dp)
-
-
       )
 
   }
