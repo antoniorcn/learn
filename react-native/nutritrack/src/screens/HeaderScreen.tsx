@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
-import CurvedSvgText from "../components/CurvedSvgText";
-import CircularProgress from "../components/CircularProgress";
+import CurvedText from "../components/CurvedText";
+import CurvedAndCircularProgress from "../components/CurvedAndCircular";
 import MacroProgressItem from "../components/MacroProgressItem";
 
 export default function HeaderScreen() {
@@ -17,15 +17,22 @@ export default function HeaderScreen() {
         <View style={styles.statsContainer}>
           <View style={styles.circleContainer}>
             {/* <Text style={styles.goalText}>75% of daily goal</Text> */}
-            <CurvedSvgText texto="75% of daily goal" raio={80} 
-              pos={{x: 100, y: 150}} angles={{start: 210, end: 330}}/>
+            {/* <CurvedText texto="75% of daily goal" raio={{x: 40, y:40}} 
+              pos={{x: 48, y: 80}} angles={{start: 180, end: 360}}/>
             <CircularProgress
               size={130}
               strokeWidth={10}
               progress={0.75}
               value="1500"
               subtitle="kcal left"
-            />
+            /> */}
+            <CurvedAndCircularProgress size={130}
+              text="75% of daily goal"
+              angles={{start: 180, end: 360}}
+              strokeWidth={10}
+              progress={0.75}
+              value="1500"
+              subtitle="kcal left"/>
           </View>
 
           <View style={styles.macrosContainer}>

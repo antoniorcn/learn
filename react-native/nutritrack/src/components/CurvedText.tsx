@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-interface CurvedSvgTextProps { 
+interface CurvedTextProps { 
     texto : string;
-    raio : number;
+    raio : {x: number, y: number};
     pos : {x: number, y: number};
     angles : {start: number, end: number};
 }
@@ -27,7 +27,7 @@ interface CurvedSvgTextProps {
 //   );
 // }
 
-const CurvedSvgText : React.FC<CurvedSvgTextProps> = ( { texto, raio, pos, angles } ) => {
+const CurvedText : React.FC<CurvedTextProps> = ( { texto, raio, pos, angles } ) => {
     const caracteres = texto.split("");
     const listOfTexts = [];
     const angleGap = angles.end - angles.start;
@@ -36,16 +36,17 @@ const CurvedSvgText : React.FC<CurvedSvgTextProps> = ( { texto, raio, pos, angle
         const char = caracteres[i];
         const angle = angles.start + (i * charGap);
         const angleRad = angle * (Math.PI / 180);
-        const strAngle = ((270 - angles.start) - (i * charGap)).toString() + "deg";
-        const x = pos.x + (raio * Math.cos(angleRad));
-        const y = pos.y + (raio * Math.sin(angleRad));
+        const strAngle = (90 + angle).toString() + "deg";
+        const x = pos.x + (raio.x * Math.cos(angleRad));
+        const y = pos.y + (raio.y * Math.sin(angleRad));
         console.log(`Char: ${char}, Angle: ${angle}, X: ${x}, Y: ${y}`);
     listOfTexts.push(<Text id={`letter-${i}`} 
         style={{
             left : x, top: y,
             transform: [
-            // { rotate: strAngle}, 
-            // {translateX: x}, {translateY: y}
+            {translateX: x}, {translateY: y},
+            { rotate: strAngle }, 
+            
         ], position: "absolute"}}>{char}</Text>);
     }
     return (
@@ -56,4 +57,4 @@ const CurvedSvgText : React.FC<CurvedSvgTextProps> = ( { texto, raio, pos, angle
     );
 }
 
-export default CurvedSvgText; 
+export default CurvedText; 

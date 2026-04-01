@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import TopTabsNavigator from './navigation/TopTabsNavigator';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
+import Teste from './components/Teste';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <TopTabsNavigator />
       </NavigationContainer>
     </SafeAreaProvider>
+    // <Teste/>
   );
 }
 

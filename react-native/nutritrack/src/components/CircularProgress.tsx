@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { LayoutChangeEvent, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
 type Props = {
@@ -8,6 +8,7 @@ type Props = {
   progress: number;
   value: string;
   subtitle: string;
+  onLayout?: ( ev : LayoutChangeEvent ) => void;
 };
 
 export default function CircularProgress({
@@ -16,6 +17,7 @@ export default function CircularProgress({
   progress,
   value,
   subtitle,
+  onLayout
 }: Props) {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -32,6 +34,7 @@ export default function CircularProgress({
           cy={size / 2}
           r={radius}
           strokeWidth={strokeWidth}
+          onLayout={onLayout}
         />
         <Circle
           stroke="#45C46B"
