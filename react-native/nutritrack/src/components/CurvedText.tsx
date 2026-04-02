@@ -44,8 +44,8 @@ const CurvedText : React.FC<CurvedTextProps> = ( { texto, raio, pos, angles } ) 
         style={{
             left : x, top: y,
             transform: [
-            {translateX: x}, {translateY: y},
-            { rotate: strAngle }, 
+                {translateX: x}, {translateY: y},
+                { rotate: strAngle }, 
             
         ], position: "absolute"}}>{char}</Text>);
     }

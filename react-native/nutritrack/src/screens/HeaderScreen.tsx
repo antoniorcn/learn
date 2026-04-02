@@ -1,14 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
 import CurvedText from "../components/CurvedText";
-import CurvedAndCircularProgress from "../components/CurvedAndCircular";
+// import CurvedTextAndCircularProgress from "../components/CurvedTextAndCircularProgress";
 import MacroProgressItem from "../components/MacroProgressItem";
+import CircularProgress from "../components/CircularProgress";
 
 export default function HeaderScreen() {
+  const weekDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  const date = new Date();
+
+  const formatted = `${weekDays[date.getDay()]}, ${(months[date.getMonth()]).toString().padStart(2, '0')}, ${date.getDate().toString()}`;
 
     return (
     <>
       <View style={styles.topArea}>
-        <Text style={styles.dateText}>SUN, FEB 1</Text>
+        <Text style={styles.dateText}>{formatted}</Text>
         <Text style={styles.logoText}>
           NutriTrack
           <Text style={styles.logoLeaf}>◢</Text>
@@ -17,7 +23,7 @@ export default function HeaderScreen() {
         <View style={styles.statsContainer}>
           <View style={styles.circleContainer}>
             {/* <Text style={styles.goalText}>75% of daily goal</Text> */}
-            {/* <CurvedText texto="75% of daily goal" raio={{x: 40, y:40}} 
+            <CurvedText texto="Antonio Carvalho" raio={{x: 40, y:40}} 
               pos={{x: 48, y: 80}} angles={{start: 180, end: 360}}/>
             <CircularProgress
               size={130}
@@ -25,19 +31,19 @@ export default function HeaderScreen() {
               progress={0.75}
               value="1500"
               subtitle="kcal left"
-            /> */}
-            <CurvedAndCircularProgress size={130}
+            />
+            {/* <CurvedTextAndCircularProgress size={130}
               text="75% of daily goal"
               angles={{start: 180, end: 360}}
               strokeWidth={10}
               progress={0.75}
               value="1500"
-              subtitle="kcal left"/>
+              subtitle="kcal left"/> */}
           </View>
 
           <View style={styles.macrosContainer}>
-            <MacroProgressItem label="Protein" current={80} total={120} progress={0.67} />
-            <MacroProgressItem label="Carbs" current={200} total={250} progress={0.8} />
+            <MacroProgressItem label="Protein" current={10} total={120} progress={0.10} />
+            <MacroProgressItem label="Carbs" current={200} total={250} progress={0.2} />
             <MacroProgressItem label="Fat" current={50} total={70} progress={0.71} />
           </View>
         </View>
